@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QW4VCXXYTV"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JWJ68T37Q9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    </script>
+    <script>
+        var ON_GTAG = "G-QW4VCXXYTV"
+        var OFF_GTAG = "G-JWJ68T37Q9"
+
+        function setupOn() {
+            gtag('config', ON_GTAG)
+        }
+
+        function setupOff() {
+            gtag('config', OFF_GTAG)
+        }
+    </script>
+</head>
+<body>
+    <h1>Test</h1>
+    <button onclick="setupOn()">Setup On</button>
+    <button onclick="setupOff()">Setup Off</button>
+</body>
+</html>
