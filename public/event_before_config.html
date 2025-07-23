@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QW4VCXXYTV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());    
+    </script>
+    <script>
+      function config() {
+        gtag('config', "G-QW4VCXXYTV")
+      }
+
+      function sendMessage() {
+        gtag('event', 'testing_event', {'prop': 'value'})
+      }
+    </script>
+</head>
+<body>
+    <button onclick="config()">config</button>
+    <button onclick="sendMessage()">message</button>
+</body>
+</html>
