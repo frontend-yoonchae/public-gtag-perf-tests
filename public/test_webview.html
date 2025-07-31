@@ -5,14 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        window.readValues = {
+        function readValues() {
+          return  {
             pageStartedValue: window.pageStartedValue,
             pageFinishedValue: window.pageFinishedValue,
             documentStartScriptValue: window.documentStartScriptValue
+          }
         }
+        window.headValues = readValues()
+        Promise.resolve().then(() => {
+          window.headPromiseValues = readValues()
+        })
+
+        setTimeout(() => {
+          window.headAfterTimeoutValues = readValues()
+        }, 0)
     </script>
 </head>
 <body>
+  <script>
+    window.bodyValues = readValues()
+
+    Promise.resolve().then(() => {
+      window.bodyPromiseValues = readValues()
+    })
+
+    setTimeout(() => {
+      window.bodyAfterTimeoutValues = readValues()
+    }, 0)
+</script>
     Test webview values
 </body>
 </html>
