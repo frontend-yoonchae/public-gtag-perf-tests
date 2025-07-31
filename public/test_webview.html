@@ -7,16 +7,17 @@
     <script>
         function readValues() {
           return  {
-            pageStartedValue: window.pageStartedValue,
-            pageFinishedValue: window.pageFinishedValue,
+            shouldOverrideUrlLoadingValue: window.shouldOverrideUrlLoadingValue,
+            onPageStartedValue: window.onPageStartedValue,
+            onPageFinishedValue: window.onPageFinishedValue,
+            onLoadResourceValue: window.onLoadResourceValue,
+            onPageCommitVisibleValue: window.onPageCommitVisibleValue,
             documentStartScriptValue: window.documentStartScriptValue,
             timestamp: Date.now()
           }
         }
+
         window.headValues = readValues()
-        Promise.resolve().then(() => {
-          window.headPromiseValues = readValues()
-        })
 
         setTimeout(() => {
           window.headAfterTimeoutValues = readValues()
@@ -26,10 +27,6 @@
 <body>
   <script>
     window.bodyValues = readValues()
-
-    Promise.resolve().then(() => {
-      window.bodyPromiseValues = readValues()
-    })
 
     setTimeout(() => {
       window.bodyAfterTimeoutValues = readValues()
