@@ -9,7 +9,8 @@
           return  {
             pageStartedValue: window.pageStartedValue,
             pageFinishedValue: window.pageFinishedValue,
-            documentStartScriptValue: window.documentStartScriptValue
+            documentStartScriptValue: window.documentStartScriptValue,
+            timestamp: Date.now()
           }
         }
         window.headValues = readValues()
